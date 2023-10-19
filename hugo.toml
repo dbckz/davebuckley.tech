@@ -1,0 +1,69 @@
+baseurl = "http://www.davebuckley.me"
+title = "Dave Buckley"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "Dave Buckley"
+  info = "Technology Policy"
+  description = "Dave Buckley's Personal Website"
+  keywords = "blog,developer,personal"
+  avatarurl = "images/ava.png"
+  #gravatar = "davebuckley34@gmail.com"
+
+  faviconSVG = "/img/favicon.svg"
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
+
+  since = 2023
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/dbckz"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa fa-linkedin fa-2x"
+  weight = 3
+  url = "https://linkedin.com/in/davidbuckley3"
+
+# Menu links
+[[menu.main]]
+  name = "about"
+  weight = 1
+  url = "/"
+[[menu.main]]
+  name = "posts"
+  weight = 3
+  url  = "posts/"
+[[menu.main]]
+  name = "substack"
+  weight = 4
+  url = "https://securebytes.substack.com/"
+[[menu.main]]
+  name = "projects"
+  weight = 2
+  url = "projects/"
