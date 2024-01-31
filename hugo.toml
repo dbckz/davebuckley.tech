@@ -14,7 +14,7 @@ style = "github-dark"
   info = "Technology Policy"
   description = "Dave Buckley's Personal Website"
   keywords = "blog,developer,personal"
-  avatarurl = "images/ava.png"
+  avatarurl = "images/EODS.jpeg"
   #gravatar = "davebuckley34@gmail.com"
 
   faviconSVG = "/img/favicon.svg"
@@ -56,14 +56,14 @@ style = "github-dark"
   weight = 1
   url = "/"
 [[menu.main]]
-  name = "posts"
-  weight = 3
-  url  = "posts/"
-[[menu.main]]
   name = "substack"
-  weight = 4
+  weight = 3
   url = "https://securebytes.substack.com/"
 [[menu.main]]
   name = "projects"
   weight = 2
   url = "projects/"
+[[menu.main]]
+  name = "linkedin"
+  weight = 4
+  url = "https://linkedin.com/in/davidbuckley3"
