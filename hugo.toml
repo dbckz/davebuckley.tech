@@ -1,4 +1,4 @@
-baseurl = "http://www.davebuckley.me"
+baseurl = "http://www.davebuckley.tech"
 title = "Dave Buckley"
 theme = "hugo-coder"
 languagecode = "en"
@@ -13,15 +13,14 @@ style = "github-dark"
   author = "Dave Buckley"
   info = "Technology Policy"
   description = "Dave Buckley's Personal Website"
-  keywords = "blog,developer,personal"
-  avatarurl = "images/EODS.jpeg"
-  #gravatar = "davebuckley34@gmail.com"
+  keywords = "blog,developer,personal,consulting,technology,policy"
+  avatarurl = "images/pic.jpg"
 
   faviconSVG = "/img/favicon.svg"
   favicon_32 = "/img/favicon-32x32.png"
   favicon_16 = "/img/favicon-16x16.png"
 
-  since = 2023
+  since = 2024
 
   enableTwemoji = true
 
@@ -57,13 +56,9 @@ style = "github-dark"
   url = "/"
 [[menu.main]]
   name = "substack"
-  weight = 3
+  weight = 2
   url = "https://securebytes.substack.com/"
 [[menu.main]]
-  name = "projects"
-  weight = 2
-  url = "projects/"
-[[menu.main]]
   name = "linkedin"
-  weight = 4
+  weight = 3
   url = "https://linkedin.com/in/davidbuckley3"
