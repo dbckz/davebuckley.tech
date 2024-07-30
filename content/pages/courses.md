@@ -1,3 +1,8 @@
++++
+title = 'Courses'
+date = 2024-07-30
++++
+
 # Courses
 
 ## Technical
@@ -15,7 +20,7 @@
 
 ## Non-technical
 
-- Learning to Learn: Powerful mental tools to help you master tough subjects: \
+- Learning to Learn: Powerful mental tools to help you master tough subjects \
   URL: https://www.coursera.org/learn/learning-how-to-learn/ \
   [Certificate](../certs/learning_to_learn.pdf)
   Date completed: 07/10/2023
