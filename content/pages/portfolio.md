@@ -105,6 +105,8 @@ Selected publications, presentations, panels, and other resources
 
 ## 2021
 
+**Dissertation:** [*Crossing the line: abuse of footballers on Twitter during the 2020 Men’s European Football Championship*](../files/kings_diss.pdf), September 2021
+
 **Report:** [*Exploring the role of data intermediaries in supporting responsible data sharing*](https://rtau.blog.gov.uk/2021/07/22/exploring-the-role-of-data-intermediaries-in-supporting-responsible-data-sharing/), with Christopher Thomas and Kimberley Moran, UK Centre for Data Ethics and Innovation Blog, July 2021
 
 **Resource:** [*CDEI PETs Adoption Guide*](https://cdeiuk.github.io/pets-adoption-guide/), lead author, UK Centre for Data Ethics and Innovation, July 2021
@@ -115,6 +117,8 @@ Selected publications, presentations, panels, and other resources
 
 ## 2015-2020
 
-[*Visualising the Gender Pay Gap*](https://random365.github.io/), May 2020
+**Data visualisation:** [*Visualising the Gender Pay Gap*](https://random365.github.io/), May 2020
 
-[*Interview at OpenStack Summit*](https://www.youtube.com/watch?v=0bW5yvD4Ycc), May 2018
+**Interview:** [*OpenStack Summit*](https://www.youtube.com/watch?v=0bW5yvD4Ycc), Vancouver, May 2018
+
+**Dissertation:** [*Electron Spin Resonance of Ruby, Atomic Hydrogen, and Carbon Nanotubes*](../files/oxford_diss.pdf), May 2015
