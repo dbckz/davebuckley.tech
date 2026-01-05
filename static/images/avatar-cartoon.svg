@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1c1c1c"/>
+      <stop offset="100%" style="stop-color:#0d0d0d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="195" fill="url(#bg)" stroke="url(#accent)" stroke-width="3"/>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="165" rx="75" ry="85" fill="#f0d0c0"/>
+
+  <!-- Hair -->
+  <path d="M125 140 Q130 80 200 70 Q270 80 275 140 Q275 110 250 100 Q200 85 150 100 Q125 110 125 140" fill="#3d2314"/>
+  <path d="M130 145 Q140 120 170 115 Q155 130 150 150" fill="#3d2314"/>
+  <path d="M270 145 Q260 120 230 115 Q245 130 250 150" fill="#3d2314"/>
+
+  <!-- Ears -->
+  <ellipse cx="125" cy="170" rx="12" ry="18" fill="#f0d0c0"/>
+  <ellipse cx="275" cy="170" rx="12" ry="18" fill="#f0d0c0"/>
+
+  <!-- Eyes -->
+  <ellipse cx="165" cy="160" rx="18" ry="12" fill="white"/>
+  <ellipse cx="235" cy="160" rx="18" ry="12" fill="white"/>
+  <circle cx="168" cy="160" r="8" fill="#2c1810"/>
+  <circle cx="238" cy="160" r="8" fill="#2c1810"/>
+  <circle cx="170" cy="158" r="3" fill="white"/>
+  <circle cx="240" cy="158" r="3" fill="white"/>
+
+  <!-- Eyebrows -->
+  <path d="M145 140 Q165 135 185 142" stroke="#3d2314" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M215 142 Q235 135 255 140" stroke="#3d2314" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <path d="M200 165 Q205 180 200 190 Q195 185 198 175" stroke="#d4a090" stroke-width="2" fill="none"/>
+
+  <!-- Smile -->
+  <path d="M165 210 Q200 235 235 210" stroke="#c47060" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Glasses -->
+  <rect x="140" y="148" width="50" height="35" rx="5" fill="none" stroke="#00d4ff" stroke-width="3"/>
+  <rect x="210" y="148" width="50" height="35" rx="5" fill="none" stroke="#00d4ff" stroke-width="3"/>
+  <path d="M190 163 L210 163" stroke="#00d4ff" stroke-width="3"/>
+  <path d="M140 163 L125 158" stroke="#00d4ff" stroke-width="3"/>
+  <path d="M260 163 L275 158" stroke="#00d4ff" stroke-width="3"/>
+
+  <!-- Neck -->
+  <rect x="175" y="245" width="50" height="30" fill="#f0d0c0"/>
+
+  <!-- Shirt/Collar -->
+  <path d="M120 400 L120 320 Q120 280 175 275 L175 260 L225 260 L225 275 Q280 280 280 320 L280 400" fill="#1a1a2e"/>
+  <path d="M175 260 L200 290 L225 260" fill="#0d0d0d" stroke="#00d4ff" stroke-width="2"/>
+
+  <!-- Tech accent lines -->
+  <path d="M50 350 L100 350" stroke="#00d4ff" stroke-width="2" opacity="0.5"/>
+  <path d="M300 350 L350 350" stroke="#a855f7" stroke-width="2" opacity="0.5"/>
+  <circle cx="50" cy="350" r="4" fill="#00d4ff" opacity="0.5"/>
+  <circle cx="350" cy="350" r="4" fill="#a855f7" opacity="0.5"/>
+</svg>

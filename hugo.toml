@@ -14,7 +14,7 @@ style = "github-dark"
   info = "Technology Policy"
   description = "Dave Buckley - Privacy Engineer, Data Governance Expert, Algorithmic Auditor"
   keywords = "privacy,security,data governance,privacy-enhancing technologies,PETs,algorithmic auditing,responsible AI,open source"
-  avatarurl = "images/pic.jpg"
+  avatarurl = "images/avatar-cartoon.svg"
 
   faviconSVG = "/img/favicon.svg"
   favicon_32 = "/img/favicon-32x32.png"
@@ -66,7 +66,3 @@ style = "github-dark"
   name = "pages"
   weight = 4
   url  = "pages/"
-[[menu.main]]
-  name = "privacy"
-  weight = 5
-  url  = "privacy/"
