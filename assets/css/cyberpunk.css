@@ -1,106 +1,151 @@
 /* ============================================
-   NEON MINIMALIST THEME - Clean & Subtle
+   FROST DIGITAL THEME - Cool Blues & Ice
    ============================================ */
 
 :root {
-  --cp-bg-primary: #0d0d0d;
-  --cp-bg-secondary: #141414;
-  --cp-bg-tertiary: #1c1c1c;
-  --cp-text-primary: #f0f0f0;
-  --cp-text-secondary: #888888;
-  --cp-accent-cyan: #00d4ff;
-  --cp-accent-pink: #ff6b9d;
-  --cp-accent-purple: #a855f7;
-  --cp-accent-green: #22c55e;
-  --cp-accent-yellow: #eab308;
-  --cp-border-glow: 0 0 8px rgba(0, 212, 255, 0.3);
-  --cp-text-glow: 0 0 8px rgba(0, 212, 255, 0.5);
-  --cp-pink-glow: 0 0 8px rgba(255, 107, 157, 0.3);
-  --cp-green-glow: 0 0 8px rgba(34, 197, 94, 0.3);
-  --cp-font-mono: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --cp-font-code: 'JetBrains Mono', 'Fira Code', monospace;
+  --cp-bg-primary: #0a1628;
+  --cp-bg-secondary: #0d1f3c;
+  --cp-bg-tertiary: #132744;
+  --cp-text-primary: #e8f4fc;
+  --cp-text-secondary: #94b8d4;
+  --cp-accent-cyan: #00e5ff;
+  --cp-accent-blue: #2196f3;
+  --cp-accent-ice: #b8e5f0;
+  --cp-accent-purple: #7c4dff;
+  --cp-accent-green: #00e676;
+  --cp-accent-white: #ffffff;
+  --cp-border-glow: 0 0 15px rgba(0, 229, 255, 0.4), 0 0 30px rgba(0, 229, 255, 0.2);
+  --cp-text-glow: 0 0 10px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.3);
+  --cp-ice-glow: 0 0 15px rgba(184, 229, 240, 0.5), 0 0 30px rgba(184, 229, 240, 0.3);
+  --cp-green-glow: 0 0 10px rgba(0, 230, 118, 0.5);
+  --cp-font-display: 'Exo 2', 'Rajdhani', sans-serif;
+  --cp-font-body: 'IBM Plex Sans', 'Roboto', sans-serif;
+  --cp-font-mono: 'IBM Plex Mono', 'Fira Code', monospace;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
 
 /* ============================================
-   BASE STYLES - Clean, no heavy effects
+   BASE STYLES - Frozen Depths
    ============================================ */
 
 body {
-  background-color: var(--cp-bg-primary) !important;
+  background: linear-gradient(180deg,
+    #0a1628 0%,
+    #0d1f3c 40%,
+    #132744 100%
+  ) !important;
+  background-attachment: fixed !important;
   color: var(--cp-text-primary) !important;
-  font-family: var(--cp-font-mono) !important;
-  line-height: 1.7;
+  font-family: var(--cp-font-body) !important;
+  font-weight: 400;
+  position: relative;
 }
 
-/* No scanlines - keeping it clean */
+/* Crystalline frost pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(0, 229, 255, 0.03) 0%, transparent 25%),
+    radial-gradient(circle at 80% 20%, rgba(184, 229, 240, 0.03) 0%, transparent 25%),
+    radial-gradient(circle at 40% 40%, rgba(33, 150, 243, 0.02) 0%, transparent 30%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Subtle hexagonal grid pattern */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2300e5ff' fill-opacity='0.03'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.5;
+}
 
 /* ============================================
-   TYPOGRAPHY - Elegant & Readable
+   TYPOGRAPHY - Clean & Crystalline
    ============================================ */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--cp-font-mono) !important;
+  font-family: var(--cp-font-display) !important;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: 1px;
 }
 
 h1 {
-  color: var(--cp-text-primary) !important;
+  color: var(--cp-accent-ice) !important;
   font-size: 2.5rem;
-  border-bottom: 2px solid var(--cp-accent-cyan);
-  padding-bottom: 0.5rem;
-  display: inline-block;
+  font-weight: 300;
+  text-shadow: var(--cp-ice-glow);
+  letter-spacing: 3px;
 }
 
 h2 {
   color: var(--cp-accent-cyan) !important;
-  font-size: 1.75rem;
-  margin-top: 2.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.3);
+  padding-bottom: 0.5rem;
 }
 
 h3 {
-  color: var(--cp-accent-pink) !important;
-  font-size: 1.25rem;
+  color: var(--cp-accent-blue) !important;
+  font-weight: 500;
 }
 
 /* ============================================
-   LINKS - Subtle hover effects
+   LINKS - Ice Blue Highlights
    ============================================ */
 
 a {
   color: var(--cp-accent-cyan) !important;
   text-decoration: none !important;
-  transition: color 0.2s ease, border-color 0.2s ease;
-  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
 }
 
 a:hover {
-  color: var(--cp-accent-pink) !important;
-  border-bottom-color: var(--cp-accent-pink);
+  color: var(--cp-accent-ice) !important;
+  text-shadow: var(--cp-ice-glow);
 }
 
 /* ============================================
-   NAVIGATION - Minimal
+   NAVIGATION - Frosted Glass
    ============================================ */
 
 .navigation {
-  background: var(--cp-bg-secondary) !important;
-  border-bottom: 1px solid rgba(0, 212, 255, 0.2) !important;
+  background: rgba(13, 31, 60, 0.85) !important;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.2) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .navigation a {
+  font-family: var(--cp-font-display);
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 1px;
 }
 
 .navigation a:hover {
-  background: rgba(0, 212, 255, 0.08) !important;
+  background: rgba(0, 229, 255, 0.1) !important;
+}
+
+.navigation-title {
+  font-weight: 300 !important;
+  letter-spacing: 3px;
+  color: var(--cp-accent-ice) !important;
 }
 
 /* ============================================
-   CONTENT CONTAINERS
+   CONTENT CONTAINERS - Ice Panels
    ============================================ */
 
 .content {
@@ -108,42 +153,54 @@ a:hover {
 }
 
 article, .post, .page {
-  background: var(--cp-bg-secondary) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
+  background: rgba(13, 31, 60, 0.6) !important;
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: 12px;
   padding: 2rem;
   margin: 1rem 0;
+  backdrop-filter: blur(5px);
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 article:hover, .post:hover {
-  border-color: rgba(0, 212, 255, 0.3);
+  border-color: rgba(0, 229, 255, 0.4);
+  box-shadow:
+    0 8px 40px rgba(0, 229, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 /* ============================================
-   CARDS & BOXES
+   CARDS & BOXES - Crystalline
    ============================================ */
 
 .card, .box, .notice, blockquote {
-  background: var(--cp-bg-tertiary) !important;
+  background: linear-gradient(135deg,
+    rgba(19, 39, 68, 0.8),
+    rgba(13, 31, 60, 0.6)
+  ) !important;
   border-left: 3px solid var(--cp-accent-cyan) !important;
   border-radius: 0 8px 8px 0;
-  padding: 1rem 1.5rem;
+  padding: 1.25rem 1.5rem;
   margin: 1.5rem 0;
+  backdrop-filter: blur(5px);
 }
 
 blockquote {
   font-style: italic;
   color: var(--cp-text-secondary) !important;
+  border-left-color: var(--cp-accent-ice) !important;
 }
 
 /* ============================================
-   CODE BLOCKS
+   CODE BLOCKS - Dark Ice
    ============================================ */
 
 code, pre {
-  font-family: var(--cp-font-code) !important;
-  background: var(--cp-bg-tertiary) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  font-family: var(--cp-font-mono) !important;
+  background: rgba(10, 22, 40, 0.9) !important;
+  border: 1px solid rgba(0, 229, 255, 0.2) !important;
   border-radius: 6px;
 }
 
@@ -155,52 +212,60 @@ pre {
 code {
   color: var(--cp-accent-green) !important;
   padding: 0.2rem 0.5rem;
-  font-size: 0.9em;
 }
 
 /* ============================================
-   PRIVACY BADGES - Clean pills
+   PRIVACY BADGES - Frost Chips
    ============================================ */
 
 .privacy-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: transparent;
+  background: rgba(0, 229, 255, 0.08);
   border: 1px solid var(--cp-accent-green);
   border-radius: 20px;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
   margin: 0.25rem;
-  font-size: 0.8rem;
-  color: var(--cp-accent-green);
+  font-size: 0.85rem;
+  font-family: var(--cp-font-display);
   font-weight: 500;
-  transition: all 0.2s ease;
+  color: var(--cp-accent-green);
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 .privacy-badge:hover {
-  background: rgba(34, 197, 94, 0.1);
-  transform: translateY(-1px);
+  background: rgba(0, 230, 118, 0.15);
+  box-shadow: var(--cp-green-glow);
+  transform: translateY(-2px);
 }
 
 .privacy-badge.secure {
   border-color: var(--cp-accent-cyan);
   color: var(--cp-accent-cyan);
+  background: rgba(0, 229, 255, 0.08);
 }
 
 .privacy-badge.secure:hover {
-  background: rgba(0, 212, 255, 0.1);
+  background: rgba(0, 229, 255, 0.15);
+  box-shadow: var(--cp-border-glow);
 }
 
 /* ============================================
-   PRIVACY NOTICE BOX
+   PRIVACY NOTICE BOX - Secure Vault
    ============================================ */
 
 .privacy-notice {
-  background: rgba(34, 197, 94, 0.08);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  border-radius: 8px;
+  background: linear-gradient(135deg,
+    rgba(0, 230, 118, 0.08),
+    rgba(0, 229, 255, 0.05)
+  );
+  border: 1px solid rgba(0, 230, 118, 0.3);
+  border-radius: 12px;
   padding: 1.5rem;
   margin: 2rem 0;
+  backdrop-filter: blur(5px);
 }
 
 /* ============================================
@@ -208,23 +273,27 @@ code {
    ============================================ */
 
 .terminal-box {
-  background: var(--cp-bg-primary);
-  border: 1px solid rgba(0, 212, 255, 0.3);
+  background: rgba(10, 22, 40, 0.95);
+  border: 1px solid rgba(0, 229, 255, 0.3);
   border-radius: 8px;
   padding: 1.5rem;
-  font-family: var(--cp-font-code);
+  font-family: var(--cp-font-mono);
+  box-shadow: var(--cp-border-glow);
 }
 
 .neon-cyan {
   color: var(--cp-accent-cyan) !important;
+  text-shadow: var(--cp-text-glow);
 }
 
 .neon-pink {
-  color: var(--cp-accent-pink) !important;
+  color: var(--cp-accent-ice) !important;
+  text-shadow: var(--cp-ice-glow);
 }
 
 .neon-green {
   color: var(--cp-accent-green) !important;
+  text-shadow: var(--cp-green-glow);
 }
 
 /* ============================================
@@ -244,16 +313,20 @@ ul li::marker {
 }
 
 ol li::marker {
-  color: var(--cp-accent-pink);
+  color: var(--cp-accent-ice);
+  font-family: var(--cp-font-display);
 }
 
 /* ============================================
-   FOOTER
+   FOOTER - Deep Ice
    ============================================ */
 
 .footer {
-  background: var(--cp-bg-secondary) !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: linear-gradient(0deg,
+    rgba(10, 22, 40, 0.9),
+    transparent
+  ) !important;
+  border-top: 1px solid rgba(0, 229, 255, 0.2) !important;
   padding: 2rem 0 !important;
   margin-top: 4rem;
 }
@@ -264,13 +337,15 @@ ol li::marker {
 
 .avatar img {
   border: 2px solid var(--cp-accent-cyan) !important;
+  box-shadow: var(--cp-border-glow);
   border-radius: 50%;
   transition: all 0.3s ease;
 }
 
 .avatar img:hover {
-  border-color: var(--cp-accent-pink) !important;
-  box-shadow: var(--cp-pink-glow);
+  border-color: var(--cp-accent-ice) !important;
+  box-shadow: var(--cp-ice-glow);
+  transform: scale(1.05);
 }
 
 /* ============================================
@@ -279,31 +354,36 @@ ol li::marker {
 
 .social-icons a {
   color: var(--cp-text-secondary) !important;
-  transition: color 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
   color: var(--cp-accent-cyan) !important;
+  text-shadow: var(--cp-text-glow);
 }
 
 /* ============================================
-   BUTTONS
+   BUTTONS - Ice Crystal
    ============================================ */
 
 button, .button, input[type="submit"] {
-  background: transparent !important;
+  background: rgba(0, 229, 255, 0.1) !important;
   border: 1px solid var(--cp-accent-cyan) !important;
   color: var(--cp-accent-cyan) !important;
-  padding: 0.6rem 1.25rem;
-  font-family: var(--cp-font-mono);
+  padding: 0.7rem 1.4rem;
+  font-family: var(--cp-font-display);
   font-weight: 500;
+  letter-spacing: 1px;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
 button:hover, .button:hover, input[type="submit"]:hover {
-  background: rgba(0, 212, 255, 0.1) !important;
+  background: rgba(0, 229, 255, 0.2) !important;
+  box-shadow: var(--cp-border-glow);
+  transform: translateY(-2px);
 }
 
 /* ============================================
@@ -316,21 +396,47 @@ button:hover, .button:hover, input[type="submit"]:hover {
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--cp-bg-secondary);
+  background: var(--cp-bg-primary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--cp-accent-cyan);
-  border-radius: 3px;
+  background: linear-gradient(180deg, var(--cp-accent-cyan), var(--cp-accent-blue));
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--cp-accent-pink);
+  background: var(--cp-accent-ice);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes frost-pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.5), 0 0 30px rgba(184, 229, 240, 0.3);
+  }
+}
+
+.frost-pulse {
+  animation: frost-pulse 3s ease-in-out infinite;
 }
 
 /* ============================================
@@ -339,11 +445,16 @@ button:hover, .button:hover, input[type="submit"]:hover {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
   }
 
   .privacy-badge {
     font-size: 0.75rem;
-    padding: 0.35rem 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  article, .post, .page {
+    padding: 1.5rem;
   }
 }
