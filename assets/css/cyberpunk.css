@@ -1,143 +1,144 @@
 /* ============================================
-   CYBERPUNK THEME - Privacy-First Design
+   SYNTHWAVE THEME - 80s Retro-Futurism
    ============================================ */
 
-/* Custom Properties (CSS Variables) */
 :root {
-  --cp-bg-primary: #0a0a0f;
-  --cp-bg-secondary: #12121a;
-  --cp-bg-tertiary: #1a1a2e;
-  --cp-text-primary: #e0e0ff;
-  --cp-text-secondary: #a0a0c0;
-  --cp-accent-cyan: #00fff9;
+  --cp-bg-primary: #1a1a2e;
+  --cp-bg-secondary: #16213e;
+  --cp-bg-tertiary: #0f3460;
+  --cp-text-primary: #eee5ff;
+  --cp-text-secondary: #c4b5e0;
+  --cp-accent-cyan: #00d9ff;
   --cp-accent-pink: #ff2a6d;
-  --cp-accent-purple: #9d00ff;
-  --cp-accent-green: #00ff41;
-  --cp-accent-yellow: #f0f000;
-  --cp-border-glow: 0 0 10px var(--cp-accent-cyan), 0 0 20px rgba(0, 255, 249, 0.3);
-  --cp-text-glow: 0 0 10px var(--cp-accent-cyan), 0 0 20px var(--cp-accent-cyan);
-  --cp-pink-glow: 0 0 10px var(--cp-accent-pink), 0 0 20px rgba(255, 42, 109, 0.3);
-  --cp-green-glow: 0 0 10px var(--cp-accent-green), 0 0 20px rgba(0, 255, 65, 0.3);
-  --cp-font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Consolas', monospace;
+  --cp-accent-purple: #d300c5;
+  --cp-accent-orange: #ff6b35;
+  --cp-accent-yellow: #ffd700;
+  --cp-accent-green: #39ff14;
+  --cp-border-glow: 0 0 15px rgba(211, 0, 197, 0.5), 0 0 30px rgba(255, 42, 109, 0.3);
+  --cp-text-glow: 0 0 10px #ff2a6d, 0 0 20px #d300c5, 0 0 30px #ff2a6d;
+  --cp-pink-glow: 0 0 15px rgba(255, 42, 109, 0.6), 0 0 30px rgba(255, 42, 109, 0.4);
+  --cp-purple-glow: 0 0 15px rgba(211, 0, 197, 0.6), 0 0 30px rgba(211, 0, 197, 0.4);
+  --cp-green-glow: 0 0 10px rgba(57, 255, 20, 0.5);
+  --cp-font-display: 'Orbitron', 'Audiowide', sans-serif;
+  --cp-font-body: 'Rajdhani', 'Exo 2', sans-serif;
+  --cp-font-mono: 'Share Tech Mono', monospace;
 }
 
-/* Import monospace font */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
 
 /* ============================================
-   BASE STYLES
+   BASE STYLES - Sunset Vibes
    ============================================ */
 
 body {
-  background-color: var(--cp-bg-primary) !important;
+  background: linear-gradient(180deg,
+    #1a1a2e 0%,
+    #16213e 30%,
+    #1a1a2e 60%,
+    #2d1b4e 100%
+  ) !important;
+  background-attachment: fixed !important;
   color: var(--cp-text-primary) !important;
-  font-family: var(--cp-font-mono) !important;
+  font-family: var(--cp-font-body) !important;
+  font-weight: 400;
+  letter-spacing: 0.5px;
   position: relative;
+  min-height: 100vh;
 }
 
-/* Scanline overlay effect */
+/* Horizon grid effect */
 body::before {
   content: '';
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.1) 1px,
-    transparent 1px,
-    transparent 2px
-  );
+  height: 40%;
+  background:
+    linear-gradient(transparent 0%, rgba(211, 0, 197, 0.1) 100%),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(211, 0, 197, 0.15) 60px,
+      rgba(211, 0, 197, 0.15) 61px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 40px,
+      rgba(255, 42, 109, 0.1) 40px,
+      rgba(255, 42, 109, 0.1) 41px
+    );
   pointer-events: none;
-  z-index: 9999;
-  opacity: 0.3;
+  z-index: -1;
+  transform: perspective(500px) rotateX(60deg);
+  transform-origin: bottom;
 }
 
-/* Subtle grid background */
+/* Sun/glow effect */
 body::after {
   content: '';
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    linear-gradient(rgba(0, 255, 249, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 249, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 150px;
+  background: radial-gradient(ellipse at center bottom,
+    rgba(255, 107, 53, 0.4) 0%,
+    rgba(255, 42, 109, 0.2) 40%,
+    transparent 70%
+  );
   pointer-events: none;
   z-index: -1;
+  border-radius: 50%;
 }
 
 /* ============================================
-   TYPOGRAPHY
+   TYPOGRAPHY - Bold & Futuristic
    ============================================ */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--cp-font-mono) !important;
-  color: var(--cp-accent-cyan) !important;
+  font-family: var(--cp-font-display) !important;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 h1 {
-  text-shadow: var(--cp-text-glow);
-  animation: flicker 4s infinite;
+  color: transparent !important;
+  background: linear-gradient(180deg, #ff2a6d 0%, #d300c5 50%, #00d9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 900;
+  font-size: 2.8rem;
+  text-shadow: none;
+  filter: drop-shadow(0 0 10px rgba(255, 42, 109, 0.5));
 }
 
 h2 {
   color: var(--cp-accent-pink) !important;
   text-shadow: var(--cp-pink-glow);
-  border-bottom: 1px solid var(--cp-accent-pink);
+  font-weight: 700;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, var(--cp-accent-pink), var(--cp-accent-purple), transparent) 1;
   padding-bottom: 0.5rem;
 }
 
 h3 {
-  color: var(--cp-accent-purple) !important;
-}
-
-/* Glitch effect for main title */
-@keyframes glitch {
-  0%, 90%, 100% {
-    transform: translate(0);
-    text-shadow: var(--cp-text-glow);
-  }
-  92% {
-    transform: translate(-2px, 1px);
-    text-shadow: -2px 0 var(--cp-accent-pink), 2px 0 var(--cp-accent-cyan);
-  }
-  94% {
-    transform: translate(2px, -1px);
-    text-shadow: 2px 0 var(--cp-accent-pink), -2px 0 var(--cp-accent-cyan);
-  }
-  96% {
-    transform: translate(-1px, 2px);
-    text-shadow: -2px 0 var(--cp-accent-cyan), 2px 0 var(--cp-accent-pink);
-  }
-}
-
-@keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-    text-shadow: var(--cp-text-glow);
-  }
-  20%, 24%, 55% {
-    opacity: 0.8;
-    text-shadow: none;
-  }
+  color: var(--cp-accent-cyan) !important;
+  font-weight: 500;
 }
 
 /* ============================================
-   LINKS
+   LINKS - Neon Signs
    ============================================ */
 
 a {
   color: var(--cp-accent-cyan) !important;
   text-decoration: none !important;
   transition: all 0.3s ease;
-  position: relative;
+  font-weight: 500;
 }
 
 a:hover {
@@ -145,48 +146,50 @@ a:hover {
   text-shadow: var(--cp-pink-glow);
 }
 
-a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: -2px;
-  left: 0;
-  background: linear-gradient(90deg, var(--cp-accent-cyan), var(--cp-accent-pink));
-  transition: width 0.3s ease;
-}
-
-a:hover::after {
-  width: 100%;
-}
-
 /* ============================================
-   NAVIGATION
+   NAVIGATION - Chrome Style
    ============================================ */
 
 .navigation {
-  background: linear-gradient(180deg, var(--cp-bg-secondary), transparent) !important;
-  border-bottom: 1px solid var(--cp-accent-cyan) !important;
-  box-shadow: 0 2px 20px rgba(0, 255, 249, 0.1);
+  background: linear-gradient(180deg,
+    rgba(22, 33, 62, 0.95) 0%,
+    rgba(26, 26, 46, 0.9) 100%
+  ) !important;
+  border-bottom: 2px solid transparent !important;
+  border-image: linear-gradient(90deg,
+    transparent,
+    var(--cp-accent-pink),
+    var(--cp-accent-purple),
+    var(--cp-accent-cyan),
+    transparent
+  ) 1;
+  backdrop-filter: blur(10px);
 }
 
 .navigation a {
-  text-transform: uppercase !important;
-  letter-spacing: 1px;
-  font-size: 0.9rem;
+  font-family: var(--cp-font-display);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .navigation a:hover {
-  background: rgba(0, 255, 249, 0.1) !important;
+  background: linear-gradient(180deg,
+    rgba(255, 42, 109, 0.2),
+    transparent
+  ) !important;
 }
 
 .navigation-title {
-  font-weight: 700 !important;
-  animation: glitch 8s infinite;
+  font-weight: 900 !important;
+  background: linear-gradient(90deg, var(--cp-accent-pink), var(--cp-accent-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
 }
 
 /* ============================================
-   CONTENT CONTAINERS
+   CONTENT CONTAINERS - Holographic Cards
    ============================================ */
 
 .content {
@@ -194,373 +197,144 @@ a:hover::after {
 }
 
 article, .post, .page {
-  background: rgba(18, 18, 26, 0.8) !important;
-  border: 1px solid rgba(0, 255, 249, 0.2);
-  border-radius: 4px;
+  background: linear-gradient(135deg,
+    rgba(22, 33, 62, 0.8) 0%,
+    rgba(15, 52, 96, 0.6) 50%,
+    rgba(22, 33, 62, 0.8) 100%
+  ) !important;
+  border: 1px solid rgba(211, 0, 197, 0.3);
+  border-radius: 8px;
   padding: 2rem;
   margin: 1rem 0;
   box-shadow:
-    0 0 20px rgba(0, 255, 249, 0.05),
-    inset 0 0 60px rgba(0, 0, 0, 0.3);
+    0 0 20px rgba(211, 0, 197, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
 }
 
 article:hover, .post:hover {
-  border-color: var(--cp-accent-cyan);
+  border-color: var(--cp-accent-pink);
   box-shadow: var(--cp-border-glow);
 }
 
 /* ============================================
-   CARDS & BOXES
+   CARDS & BOXES - Retro Panels
    ============================================ */
 
 .card, .box, .notice, blockquote {
-  background: var(--cp-bg-tertiary) !important;
-  border-left: 3px solid var(--cp-accent-pink) !important;
-  padding: 1rem 1.5rem;
-  margin: 1rem 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.card::before, .box::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 255, 249, 0.05) 0%,
-    transparent 50%,
-    rgba(255, 42, 109, 0.05) 100%
-  );
-  pointer-events: none;
+  background: linear-gradient(135deg,
+    rgba(45, 27, 78, 0.6),
+    rgba(22, 33, 62, 0.8)
+  ) !important;
+  border-left: 4px solid var(--cp-accent-pink) !important;
+  border-radius: 0 8px 8px 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
 }
 
 blockquote {
   font-style: italic;
   color: var(--cp-text-secondary) !important;
-  border-left: 3px solid var(--cp-accent-purple) !important;
+  font-family: var(--cp-font-body);
 }
 
 /* ============================================
-   CODE BLOCKS
+   CODE BLOCKS - Digital Display
    ============================================ */
 
 code, pre {
   font-family: var(--cp-font-mono) !important;
-  background: var(--cp-bg-secondary) !important;
-  border: 1px solid rgba(0, 255, 249, 0.3) !important;
+  background: rgba(10, 10, 20, 0.8) !important;
+  border: 1px solid rgba(0, 217, 255, 0.3) !important;
+  border-radius: 4px;
 }
 
 pre {
-  padding: 1rem !important;
+  padding: 1.25rem !important;
   overflow-x: auto;
-  box-shadow:
-    inset 0 0 30px rgba(0, 0, 0, 0.5),
-    0 0 10px rgba(0, 255, 249, 0.1);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 code {
   color: var(--cp-accent-green) !important;
-  padding: 0.2rem 0.4rem;
+  padding: 0.2rem 0.5rem;
+  text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
 }
 
 /* ============================================
-   PRIVACY BADGES
+   PRIVACY BADGES - Arcade Style
    ============================================ */
 
 .privacy-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--cp-bg-tertiary);
-  border: 1px solid var(--cp-accent-green);
+  background: linear-gradient(180deg,
+    rgba(57, 255, 20, 0.2),
+    rgba(57, 255, 20, 0.05)
+  );
+  border: 2px solid var(--cp-accent-green);
   border-radius: 4px;
   padding: 0.5rem 1rem;
   margin: 0.25rem;
   font-size: 0.85rem;
+  font-family: var(--cp-font-display);
+  font-weight: 500;
   color: var(--cp-accent-green);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
 }
 
 .privacy-badge:hover {
-  box-shadow: var(--cp-green-glow);
+  box-shadow: var(--cp-green-glow), 0 0 20px rgba(57, 255, 20, 0.4);
   transform: translateY(-2px);
 }
 
 .privacy-badge.secure {
   border-color: var(--cp-accent-cyan);
   color: var(--cp-accent-cyan);
-}
-
-.privacy-badge.warning {
-  border-color: var(--cp-accent-yellow);
-  color: var(--cp-accent-yellow);
+  background: linear-gradient(180deg,
+    rgba(0, 217, 255, 0.2),
+    rgba(0, 217, 255, 0.05)
+  );
 }
 
 /* ============================================
-   PRIVACY NOTICE BOX
+   PRIVACY NOTICE BOX - Arcade Cabinet
    ============================================ */
 
 .privacy-notice {
-  background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 255, 249, 0.1));
-  border: 1px solid var(--cp-accent-green);
-  border-radius: 4px;
+  background: linear-gradient(180deg,
+    rgba(57, 255, 20, 0.1),
+    rgba(0, 217, 255, 0.05)
+  );
+  border: 2px solid var(--cp-accent-green);
+  border-radius: 8px;
   padding: 1.5rem;
   margin: 2rem 0;
-  position: relative;
-}
-
-.privacy-notice::before {
-  content: '[ SECURE ]';
-  position: absolute;
-  top: -0.75rem;
-  left: 1rem;
-  background: var(--cp-bg-primary);
-  padding: 0 0.5rem;
-  color: var(--cp-accent-green);
-  font-size: 0.8rem;
-  letter-spacing: 2px;
+  box-shadow:
+    0 0 20px rgba(57, 255, 20, 0.2),
+    inset 0 0 40px rgba(57, 255, 20, 0.05);
 }
 
 /* ============================================
    TERMINAL STYLE ELEMENTS
    ============================================ */
 
-.terminal-prompt::before {
-  content: '> ';
-  color: var(--cp-accent-green);
-}
-
 .terminal-box {
-  background: var(--cp-bg-primary);
-  border: 1px solid var(--cp-accent-cyan);
-  border-radius: 4px;
+  background: rgba(10, 10, 20, 0.9);
+  border: 2px solid var(--cp-accent-purple);
+  border-radius: 8px;
   padding: 1.5rem;
   font-family: var(--cp-font-mono);
-  position: relative;
+  box-shadow: var(--cp-purple-glow);
 }
 
-.terminal-box::before {
-  content: '[ TERMINAL ]';
-  position: absolute;
-  top: -0.75rem;
-  left: 1rem;
-  background: var(--cp-bg-primary);
-  padding: 0 0.5rem;
-  color: var(--cp-accent-cyan);
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-}
-
-/* ============================================
-   LISTS
-   ============================================ */
-
-ul, ol {
-  color: var(--cp-text-primary);
-}
-
-li {
-  margin: 0.5rem 0;
-  position: relative;
-}
-
-ul li::marker {
-  color: var(--cp-accent-cyan);
-}
-
-ol li::marker {
-  color: var(--cp-accent-pink);
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-
-.footer {
-  background: linear-gradient(0deg, var(--cp-bg-secondary), transparent) !important;
-  border-top: 1px solid var(--cp-accent-cyan) !important;
-  padding: 2rem 0 !important;
-  margin-top: 3rem;
-}
-
-.footer-privacy {
-  text-align: center;
-  padding: 1rem;
-  margin-top: 1rem;
-  border: 1px solid var(--cp-accent-green);
-  background: rgba(0, 255, 65, 0.05);
-  font-size: 0.85rem;
-}
-
-.footer-privacy::before {
-  content: '[ PRIVACY FIRST ]';
-  display: block;
-  color: var(--cp-accent-green);
-  margin-bottom: 0.5rem;
-  letter-spacing: 2px;
-}
-
-/* ============================================
-   AVATAR & PROFILE
-   ============================================ */
-
-.avatar img {
-  border: 3px solid var(--cp-accent-cyan) !important;
-  box-shadow: var(--cp-border-glow);
-  transition: all 0.3s ease;
-}
-
-.avatar img:hover {
-  border-color: var(--cp-accent-pink) !important;
-  box-shadow: var(--cp-pink-glow);
-}
-
-/* ============================================
-   SOCIAL ICONS
-   ============================================ */
-
-.social-icons a {
-  color: var(--cp-text-secondary) !important;
-  transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: var(--cp-accent-cyan) !important;
-  text-shadow: var(--cp-text-glow);
-  transform: scale(1.1);
-}
-
-/* ============================================
-   BUTTONS
-   ============================================ */
-
-button, .button, input[type="submit"] {
-  background: transparent !important;
-  border: 1px solid var(--cp-accent-cyan) !important;
-  color: var(--cp-accent-cyan) !important;
-  padding: 0.75rem 1.5rem;
-  font-family: var(--cp-font-mono);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-button:hover, .button:hover, input[type="submit"]:hover {
-  background: rgba(0, 255, 249, 0.1) !important;
-  box-shadow: var(--cp-border-glow);
-}
-
-button::before, .button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 249, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-button:hover::before, .button:hover::before {
-  left: 100%;
-}
-
-/* ============================================
-   SELECTION
-   ============================================ */
-
-::selection {
-  background: var(--cp-accent-pink);
-  color: var(--cp-bg-primary);
-}
-
-/* ============================================
-   SCROLLBAR
-   ============================================ */
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--cp-bg-secondary);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--cp-accent-cyan);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--cp-accent-pink);
-}
-
-/* ============================================
-   RESPONSIVE ADJUSTMENTS
-   ============================================ */
-
-@media (max-width: 768px) {
-  body::before {
-    opacity: 0.15; /* Reduce scanlines on mobile */
-  }
-
-  h1 {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-  }
-
-  .privacy-badge {
-    font-size: 0.75rem;
-    padding: 0.4rem 0.8rem;
-  }
-}
-
-/* ============================================
-   ANIMATIONS
-   ============================================ */
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
-@keyframes borderGlow {
-  0%, 100% {
-    border-color: var(--cp-accent-cyan);
-    box-shadow: 0 0 5px var(--cp-accent-cyan);
-  }
-  50% {
-    border-color: var(--cp-accent-pink);
-    box-shadow: 0 0 15px var(--cp-accent-pink);
-  }
-}
-
-.glow-pulse {
-  animation: borderGlow 3s infinite;
-}
-
-/* ============================================
-   SPECIAL EFFECTS
-   ============================================ */
-
-/* Neon text utility classes */
 .neon-cyan {
   color: var(--cp-accent-cyan) !important;
-  text-shadow: var(--cp-text-glow);
+  text-shadow: 0 0 10px var(--cp-accent-cyan);
 }
 
 .neon-pink {
@@ -573,30 +347,175 @@ button:hover::before, .button:hover::before {
   text-shadow: var(--cp-green-glow);
 }
 
-/* Data stream effect for backgrounds */
-.data-stream {
-  position: relative;
-  overflow: hidden;
+/* ============================================
+   LISTS
+   ============================================ */
+
+ul, ol {
+  color: var(--cp-text-primary);
 }
 
-.data-stream::after {
-  content: '01001000 01100101 01101100 01101100 01101111';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  font-size: 0.6rem;
-  color: rgba(0, 255, 249, 0.1);
-  white-space: nowrap;
-  animation: stream 20s linear infinite;
-  pointer-events: none;
+li {
+  margin: 0.6rem 0;
 }
 
-@keyframes stream {
-  0% {
-    transform: translateX(0);
+ul li::marker {
+  color: var(--cp-accent-pink);
+}
+
+ol li::marker {
+  color: var(--cp-accent-cyan);
+  font-family: var(--cp-font-display);
+}
+
+/* ============================================
+   FOOTER - Horizon Line
+   ============================================ */
+
+.footer {
+  background: linear-gradient(0deg,
+    rgba(45, 27, 78, 0.8),
+    transparent
+  ) !important;
+  border-top: 2px solid transparent !important;
+  border-image: linear-gradient(90deg,
+    transparent,
+    var(--cp-accent-pink),
+    var(--cp-accent-purple),
+    transparent
+  ) 1;
+  padding: 2rem 0 !important;
+  margin-top: 4rem;
+}
+
+/* ============================================
+   AVATAR & PROFILE
+   ============================================ */
+
+.avatar img {
+  border: 3px solid var(--cp-accent-pink) !important;
+  box-shadow: var(--cp-pink-glow);
+  transition: all 0.3s ease;
+}
+
+.avatar img:hover {
+  border-color: var(--cp-accent-cyan) !important;
+  box-shadow: 0 0 20px var(--cp-accent-cyan), 0 0 40px var(--cp-accent-pink);
+  transform: scale(1.05);
+}
+
+/* ============================================
+   SOCIAL ICONS
+   ============================================ */
+
+.social-icons a {
+  color: var(--cp-text-secondary) !important;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--cp-accent-pink) !important;
+  text-shadow: var(--cp-pink-glow);
+  transform: scale(1.2);
+}
+
+/* ============================================
+   BUTTONS - Arcade Buttons
+   ============================================ */
+
+button, .button, input[type="submit"] {
+  background: linear-gradient(180deg,
+    rgba(255, 42, 109, 0.3),
+    rgba(211, 0, 197, 0.2)
+  ) !important;
+  border: 2px solid var(--cp-accent-pink) !important;
+  color: var(--cp-accent-pink) !important;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--cp-font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 0 rgba(211, 0, 197, 0.5);
+}
+
+button:hover, .button:hover, input[type="submit"]:hover {
+  background: linear-gradient(180deg,
+    rgba(255, 42, 109, 0.5),
+    rgba(211, 0, 197, 0.4)
+  ) !important;
+  box-shadow: var(--cp-pink-glow), 0 2px 0 rgba(211, 0, 197, 0.5);
+  transform: translateY(2px);
+}
+
+/* ============================================
+   SELECTION & SCROLLBAR
+   ============================================ */
+
+::selection {
+  background: var(--cp-accent-pink);
+  color: var(--cp-bg-primary);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cp-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--cp-accent-pink), var(--cp-accent-purple));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--cp-accent-cyan), var(--cp-accent-pink));
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow: var(--cp-pink-glow);
   }
-  100% {
-    transform: translateX(-50%);
+  50% {
+    text-shadow: 0 0 5px var(--cp-accent-pink), 0 0 10px var(--cp-accent-pink);
+  }
+}
+
+@keyframes sunsetShift {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(20deg);
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  body::before {
+    height: 30%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .privacy-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    letter-spacing: 1px;
   }
 }
