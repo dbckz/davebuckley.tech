@@ -5,10 +5,7 @@ defaultcontentlanguage = "en"
 
 paginate = 20
 
-# Hugo Modules - theme import
-[module]
-  [[module.imports]]
-    path = "github.com/luizdepra/hugo-coder"
+theme = "hugo-coder"
 
 [markup.highlight]
 style = "github-dark"
