@@ -12,8 +12,8 @@ style = "github-dark"
 [params]
   author = "Dave Buckley"
   info = "Technology Policy"
-  description = "Dave Buckley's Personal Website"
-  keywords = "blog,developer,personal,consulting,technology,policy"
+  description = "Dave Buckley - Privacy Engineer, Data Governance Expert, Algorithmic Auditor"
+  keywords = "privacy,security,data governance,privacy-enhancing technologies,PETs,algorithmic auditing,responsible AI,open source"
   avatarurl = "images/pic.jpg"
 
   faviconSVG = "/img/favicon.svg"
@@ -27,7 +27,7 @@ style = "github-dark"
   colorScheme = "auto"
   hidecolorschemetoggle = false
 
-  # customCSS = ["css/custom.css"]
+  customCSS = ["css/cyberpunk.css"]
   # customSCSS = ["scss/custom.scss"]
   # customJS = ["js/custom.js"]
 
@@ -66,3 +66,7 @@ style = "github-dark"
   name = "pages"
   weight = 4
   url  = "pages/"
+[[menu.main]]
+  name = "privacy"
+  weight = 5
+  url  = "privacy/"

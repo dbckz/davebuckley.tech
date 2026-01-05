@@ -1,0 +1,18 @@
+# Security Policy for davebuckley.tech
+# https://securitytxt.org/
+
+Contact: mailto:davebuckleyconsulting@gmail.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://davebuckley.tech/.well-known/security.txt
+
+# Security Disclosure Policy
+#
+# If you discover a security vulnerability on this website, please report it
+# responsibly by contacting me at the email address above.
+#
+# This is a static website hosted on GitHub Pages with no user data collection.
+# However, if you find any issues with the site configuration, exposed secrets,
+# or other security concerns, I would appreciate hearing about them.
+#
+# Thank you for helping keep the web secure.
