@@ -63,6 +63,10 @@ style = "github-dark"
   weight = 3
   url = "https://linkedin.com/in/davidbuckley3"
 [[menu.main]]
-  name = "pages"
+  name = "portfolio"
   weight = 4
+  url = "pages/portfolio/"
+[[menu.main]]
+  name = "pages"
+  weight = 5
   url  = "pages/"

@@ -7,6 +7,10 @@ date = 2025-11-10
 
 Selected publications, presentations, panels, and other resources
 
+## 2026
+
+**Website:** [*The Joneses - A Tribute to The Smiths*](https://www.thejonesesband.co.uk), 2026
+
 ## 2025
 
 **Interview:** *[AWO Algorithmic Governance Roundup Community Spotlight](https://eomail5.com/web-version?p=32b54b3e-b8a2-11f0-8c91-0f4ed17cae4f&pt=campaign&t=1762170625&s=1d89cd2d387c356fa8f571d49dfbe7ad9642ce2977b7697256ccf05f43ea14f3)*, with Esme Harrington (AWO Agency), November 2025
