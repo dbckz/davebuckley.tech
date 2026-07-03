@@ -15,6 +15,8 @@ Selected publications, presentations, panels, and other resources
 
 **Interview:** *[AWO Algorithmic Governance Roundup Community Spotlight](https://eomail5.com/web-version?p=32b54b3e-b8a2-11f0-8c91-0f4ed17cae4f&pt=campaign&t=1762170625&s=1d89cd2d387c356fa8f571d49dfbe7ad9642ce2977b7697256ccf05f43ea14f3)*, with Esme Harrington (AWO Agency), November 2025
 
+**Paper:** [*Private Map-Secure Reduce: Infrastructure for Efficient AI Data Markets*](https://arxiv.org/abs/2511.02055), with Sameer Wagh, Kenneth Stibler, Shubham Gupta, Lacey Strahm, Irina Bejan, Jiahao Chen, Ruchi Bhatia, Jack Bandy, Aayush Agarwal & Andrew Trask, arXiv, November 2025
+
 **Presentation:** [*The Role of Privacy-enhancing Technologies in New Data Partnership Scenarios for Official Statistics*](https://www.isi-next.org/proposals/proposal/882/detail/), with Prof. Diego Kuonen (University of Geneva), Triin Siil (Cybernetica), Freek Bomhof (TNO), Matjaz Jug (CBS Netherlands) & Steve MacFeely (OECD), 65th ISI World Statistics Congress, October 2025
 
 **Paper:** [*How Privacy Enhancing Technologies can advance responsible data sharing*](https://doi.org/10.1177/18747655251355707), with Ronald Jansen (United Nations), Matjaz Jug (CBS Netherlands) & Keping Yao (United Nations), Statistical Journal of the IAOS, September 2025
