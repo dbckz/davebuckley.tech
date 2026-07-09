@@ -12,9 +12,10 @@ style = "github-dark"
 [params]
   author = "Dave Buckley"
   info = "Technology Policy"
-  description = "Dave Buckley's Personal Website"
-  keywords = "blog,developer,personal,consulting,technology,policy"
+  description = "Dave Buckley is a software engineer and technology policy expert in London, specialising in privacy engineering, privacy-enhancing technologies (PETs), data governance, and algorithmic auditing."
+  keywords = "privacy enhancing technologies,PETs,data governance,technology policy,privacy engineering,algorithmic auditing,responsible AI,consulting"
   avatarurl = "images/pic.jpg"
+  images = ["images/pic.jpg"]
 
   faviconSVG = "/img/favicon.svg"
   favicon_32 = "/img/favicon-32x32.png"

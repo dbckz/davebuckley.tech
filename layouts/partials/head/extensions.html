@@ -1,0 +1,49 @@
+{{ if .IsHome }}
+{{ $person := dict
+  "@context" "https://schema.org"
+  "@type" "Person"
+  "@id" (printf "%s#person" .Site.BaseURL)
+  "name" "David Buckley"
+  "alternateName" "Dave Buckley"
+  "jobTitle" "Software Engineer and Technology Policy Expert"
+  "description" .Site.Params.description
+  "url" .Site.BaseURL
+  "image" ("images/pic.jpg" | absURL)
+  "email" "mailto:davebuckleyconsulting@gmail.com"
+  "address" (dict "@type" "PostalAddress" "addressLocality" "London" "addressCountry" "GB")
+  "worksFor" (dict "@type" "Organization" "name" "OpenMined" "url" "https://www.openmined.org/")
+  "alumniOf" (slice
+    (dict "@type" "CollegeOrUniversity" "name" "University of Oxford")
+    (dict "@type" "CollegeOrUniversity" "name" "King's College London"))
+  "knowsAbout" (slice
+    "Privacy-enhancing technologies"
+    "Data governance"
+    "Technology policy"
+    "Privacy engineering"
+    "Algorithmic auditing"
+    "Responsible AI")
+  "sameAs" (slice
+    "https://github.com/dbckz"
+    "https://linkedin.com/in/davidbuckley3"
+    "https://securebytes.substack.com/")
+}}
+<script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
+{{ $website := dict
+  "@context" "https://schema.org"
+  "@type" "WebSite"
+  "name" .Site.Title
+  "url" .Site.BaseURL
+  "about" (dict "@id" (printf "%s#person" .Site.BaseURL))
+}}
+<script type="application/ld+json">{{ $website | jsonify | safeJS }}</script>
+{{ else }}
+{{ $webpage := dict
+  "@context" "https://schema.org"
+  "@type" "WebPage"
+  "name" .Title
+  "description" (.Description | default .Site.Params.description)
+  "url" .Permalink
+  "author" (dict "@id" (printf "%s#person" .Site.BaseURL))
+}}
+<script type="application/ld+json">{{ $webpage | jsonify | safeJS }}</script>
+{{ end }}

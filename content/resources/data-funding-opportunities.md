@@ -1,6 +1,7 @@
 +++
 title = 'Data Funding Opportunities'
 date = 2025-11-13
+description = "A curated list of funding opportunities for data, privacy, and data governance projects, maintained by Dave Buckley."
 +++
 
 # Data Funding Opportunities

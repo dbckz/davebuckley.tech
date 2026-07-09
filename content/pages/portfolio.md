@@ -1,6 +1,7 @@
 +++
 title = 'Portfolio'
 date = 2025-11-10
+description = "Dave Buckley's publications, reports, talks, and panels on privacy-enhancing technologies (PETs), data governance, and technology policy, from 2015 to the present."
 +++
 
 # Portfolio

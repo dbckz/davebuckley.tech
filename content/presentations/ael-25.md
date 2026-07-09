@@ -1,6 +1,7 @@
 +++
 title = 'Academy of European Law - Enhancing Data Protection Through Technology'
 date = 2025-11-14
+description = "Dave Buckley's presentation at the Academy of European Law on enhancing data protection through privacy-enhancing technologies (PETs)."
 +++
 
 # Academy of European Law - Enhancing Data Protection Through Technology

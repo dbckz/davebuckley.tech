@@ -1,3 +1,3 @@
 # TODO
 
-- [ ] Configure SEO
+- [x] Configure SEO

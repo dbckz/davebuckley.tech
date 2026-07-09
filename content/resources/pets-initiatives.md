@@ -1,6 +1,7 @@
 +++
 title = 'PETs initiativies'
 date = 2025-11-13
+description = "Notable initiatives, programmes, and organisations working on privacy-enhancing technologies (PETs), curated by Dave Buckley."
 +++
 
 # PETs initiatives

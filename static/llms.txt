@@ -1,0 +1,29 @@
+# Dave Buckley
+
+> Dave Buckley is a software engineer and technology policy expert based in London, specialising in privacy engineering, privacy-enhancing technologies (PETs), data governance, and algorithmic auditing. He works with OpenMined, a tech non-profit building open-source AI governance infrastructure. Previously Senior Technology Adviser at the UK's Centre for Data Ethics and Innovation (CDEI), where he led work on PETs including the UK-US PETs prize challenges (with White House OSTP, NIST, and NSF). Former member of the United Nations Privacy Task Team and co-editor of the 2023 UN PET Guide. MPhys Physics (University of Oxford); MA Digital Culture and Society (King's College London).
+
+Dave is available for collaboration, speaking at tech events and conferences, and consulting on data governance, technology policy, and responsible AI.
+
+## Key pages
+
+- [Portfolio](https://davebuckley.tech/pages/portfolio/): Publications, reports, talks, and panels on PETs, data governance, and technology policy (2015–present)
+- [Courses](https://davebuckley.tech/pages/courses/): Courses and certifications completed
+
+## Resources
+
+- [PETs bibliography](https://davebuckley.tech/resources/pets-bibliography/): Curated reading list on privacy-enhancing technologies
+- [PETs deployments catalogue](https://davebuckley.tech/resources/pets-deployments-catalogue/): Catalogue of real-world PET deployments
+- [PETs initiatives](https://davebuckley.tech/resources/pets-initiatives/): Notable initiatives and programmes in the PETs space
+- [Data governance bibliography](https://davebuckley.tech/resources/data-governance-bibliography/): Curated reading list on data governance
+- [UK data infrastructure](https://davebuckley.tech/resources/uk-data-infrastructure/): Overview of UK data infrastructure
+- [Data funding opportunities](https://davebuckley.tech/resources/data-funding-opportunities/): Funding opportunities for data-related projects
+
+## Elsewhere
+
+- [GitHub](https://github.com/dbckz)
+- [LinkedIn](https://linkedin.com/in/davidbuckley3)
+- [Substack — Secure Bytes](https://securebytes.substack.com/)
+
+## Contact
+
+- Email: davebuckleyconsulting@gmail.com

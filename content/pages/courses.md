@@ -1,6 +1,7 @@
 +++
 title = 'Courses'
 date = 2024-07-30
+description = "Courses and certifications completed by Dave Buckley across software engineering, data science, privacy, and technology policy."
 +++
 
 # Courses

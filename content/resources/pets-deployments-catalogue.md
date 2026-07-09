@@ -1,6 +1,7 @@
 +++
 title = 'PETs deployments catalogue'
 date = 2025-11-13
+description = "A catalogue of real-world deployments of privacy-enhancing technologies (PETs), maintained by Dave Buckley."
 +++
 
 # PETs deployments catalogue
