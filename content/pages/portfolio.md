@@ -10,6 +10,8 @@ Selected publications, presentations, panels, and other resources
 
 ## 2026
 
+**Interview:** [*From privacy to trust: what is needed to bring PETs to the next phase*](https://coe-dsc.nl/from-privacy-to-trust-what-is-needed-to-bring-pets-to-the-next-phase/), with Sarah van Drumpt (TNO), Centre of Excellence for Data Sharing & Cloud (CoE-DSC), September 2026
+
 **Website:** [*The Joneses - A Tribute to The Smiths*](https://www.thejonesesband.co.uk), 2026
 
 ## 2025
