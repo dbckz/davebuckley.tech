@@ -10,6 +10,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  # Every three hours, to refresh Belton's weather forecast for the room (see below)
+  schedule:
+    - cron: "17 */3 * * *"
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -74,6 +78,11 @@ jobs:
           path: public/new
       - name: Drop the review build's git metadata
         run: rm -rf public/new/.git
+      # The room shows the weather in Belton (the one near Scunthorpe). Only this runner asks
+      # Open-Meteo, so visitors' browsers never contact a weather service: they read
+      # room/weather.json from the site. A failed fetch writes nothing and never fails the deploy.
+      - name: Add Belton's weather forecast
+        run: python3 .github/scripts/belton_weather.py public/room/weather.json public/new/room/weather.json
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
