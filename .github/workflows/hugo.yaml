@@ -60,6 +60,20 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
+      # The unlisted review build of the redesign (https://davebuckley.tech/new/) lives in the
+      # private repo dbckz/davebuckley-tech-review because it carries rights-pending media.
+      # Skipped when the REVIEW_DEPLOY_KEY secret (a read-only deploy key) is absent.
+      - name: Add the review build
+        env:
+          REVIEW_DEPLOY_KEY: ${{ secrets.REVIEW_DEPLOY_KEY }}
+        if: env.REVIEW_DEPLOY_KEY != ''
+        uses: actions/checkout@v4
+        with:
+          repository: dbckz/davebuckley-tech-review
+          ssh-key: ${{ secrets.REVIEW_DEPLOY_KEY }}
+          path: public/new
+      - name: Drop the review build's git metadata
+        run: rm -rf public/new/.git
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

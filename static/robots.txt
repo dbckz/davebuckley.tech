@@ -1,23 +1,30 @@
 User-agent: *
 Allow: /
+Disallow: /new/
 
 # AI agents and crawlers are welcome
 User-agent: GPTBot
 Allow: /
+Disallow: /new/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /new/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /new/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /new/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /new/
 
 User-agent: CCBot
 Allow: /
+Disallow: /new/
 
 Sitemap: https://davebuckley.tech/sitemap.xml
